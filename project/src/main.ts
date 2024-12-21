@@ -42,7 +42,7 @@ function onlyNum(reviewAmount: number, recent: string, loyalty: boolean) {
 
   if (recentReview) {
     recentReview.innerHTML = `Most recent review ${recent} | ${
-      loyalty ? "star" : "none"
+      loyalty ? "⭐" : "🚫"
     }`;
   }
 
@@ -54,4 +54,3 @@ onlyNum(
   reviews[reviews.length - 1].name,
   reviews[reviews.length - 1].loyaltyUser
 );
-
