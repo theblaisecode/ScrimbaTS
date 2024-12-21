@@ -41,12 +41,14 @@ function onlyNum(reviewAmount: number, recent: string) {
   }
 
   if (recentReview) {
-    recentReview.innerHTML = `Most recent review ${recent}`;
+    recentReview.innerHTML = `Most recent review ${recent} | ${
+      reviews[reviews.length - 1].loyaltyUser ? "star" : "none"
+    }`;
   }
-  
+
   return;
 }
 
 onlyNum(reviews.length, reviews[reviews.length - 1].name);
 
-console.log(reviews.length - 1)
+console.log(reviews.length - 1);
