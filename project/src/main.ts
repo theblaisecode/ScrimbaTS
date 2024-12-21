@@ -94,4 +94,4 @@ populateUser(you.isReturning, you.userName.firstName);
 
 // Type Assignment and Type Interference
 // add a isOpen variable and assign it the boolean type
-let isOpen: boolean = true;
+let isOpen: boolean;
