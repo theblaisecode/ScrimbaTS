@@ -29,7 +29,7 @@ const reviews = [
 
 function onlyNum(reviewAmount: number) {
   if (reviewTotalDisplay) {
-    reviewTotalDisplay.innerHTML = reviewAmount.toString();
+    reviewTotalDisplay.innerHTML = `Number of reviews: ${reviewAmount.toString()}`;
   }
   return;
 }
