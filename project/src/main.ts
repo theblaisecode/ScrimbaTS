@@ -35,20 +35,23 @@ const reviews = [
   },
 ];
 
-function onlyNum(reviewAmount: number, recent: string) {
+function onlyNum(reviewAmount: number, recent: string, loyalty: boolean) {
   if (reviewTotalDisplay) {
     reviewTotalDisplay.innerHTML = `Number of reviews: ${reviewAmount.toString()}`;
   }
 
   if (recentReview) {
     recentReview.innerHTML = `Most recent review ${recent} | ${
-      reviews[reviews.length - 1].loyaltyUser ? "star" : "none"
+      loyalty ? "star" : "none"
     }`;
   }
 
   return;
 }
 
-onlyNum(reviews.length, reviews[reviews.length - 1].name);
+onlyNum(
+  reviews.length,
+  reviews[reviews.length - 1].name,
+  reviews[reviews.length - 1].loyaltyUser
+);
 
-console.log(reviews.length - 1);
