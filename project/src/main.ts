@@ -8,16 +8,16 @@ import "./style.css";
 // Write a function that will display the most recent reviewers name next to the review total,
 // making sure to assign a type to the parameter, to prevent unwanted behaviour.
 
+// Boolean Types mini-challenge
+// if the last reviewer is a loyalty User, can you add a star to the end of their name?
+// please do so in the existing function, and make sure to declare what type of
+// parameters the function takes.
+
 export const reviewTotalDisplay =
   document.querySelector<HTMLSpanElement>("#reviews");
 
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
-
-const returningUserDisplay =
-  document.querySelector<HTMLSpanElement>("#returning-user");
-
-const userNameDisplay = document.querySelector<HTMLSpanElement>("#user");
 
 const reviews = [
   {
@@ -60,6 +60,18 @@ onlyNum(
   reviews[reviews.length - 1].loyaltyUser
 );
 
+// Fixing the Website
+
+// Can you fix my code to show 'Welcome back Bobby' in the Nav Bar for
+// our couch surfing website? Do this by assigning types to the parameters
+// we pass to our populateUser function, so that we can be aware of
+// errors in our user objects in the future.
+
+const returningUserDisplay =
+  document.querySelector<HTMLSpanElement>("#returning-user");
+
+const userNameDisplay = document.querySelector<HTMLSpanElement>("#user");
+
 const you = {
   userName: {
     firstName: "Bobby",
@@ -79,3 +91,7 @@ function populateUser(returning: boolean, user: string) {
 }
 
 populateUser(you.isReturning, you.userName.firstName);
+
+// Type Assignment and Type Interference
+// add a isOpen variable and assign it the boolean type
+let isOpen: boolean = true;
