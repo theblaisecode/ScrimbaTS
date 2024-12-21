@@ -14,6 +14,11 @@ export const reviewTotalDisplay =
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
 
+const returningUserDisplay =
+  document.querySelector<HTMLSpanElement>("#returning-user");
+
+const userNameDisplay = document.querySelector<HTMLSpanElement>("#user");
+
 const reviews = [
   {
     name: "Sheia",
@@ -54,3 +59,23 @@ onlyNum(
   reviews[reviews.length - 1].name,
   reviews[reviews.length - 1].loyaltyUser
 );
+
+const you = {
+  userName: {
+    firstName: "Bobby",
+    lastName: "Brown",
+  },
+  isReturning: true,
+};
+
+function populateUser(returning: boolean, user: string) {
+  if (returning && returningUserDisplay) {
+    returningUserDisplay.innerHTML = "back,";
+  }
+
+  if (userNameDisplay) {
+    userNameDisplay.innerHTML = user;
+  }
+}
+
+populateUser(you.isReturning, you.userName.firstName);
