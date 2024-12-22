@@ -122,11 +122,11 @@ const you3: {
   lastName: string;
   isReturning: boolean;
   age: number;
-  stayedAt: (string | number)[];
+  stayedAt: string[];
 } = {
   firstName: "Bobby",
   lastName: "Brown",
   isReturning: true,
   age: 35,
-  stayedAt: ["florida-home", "oman-flat", "tokyo-bungalow", 22],
+  stayedAt: ["Lagos", "Osun", "Anambra", "Imo"],
 };
