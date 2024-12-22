@@ -95,3 +95,38 @@ populateUser(you.isReturning, you.userName.firstName);
 // Type Assignment and Type Interference
 // add a isOpen variable and assign it the boolean type
 let isOpen: boolean;
+
+// Object Types
+// In this scrim, based on what we just learnt, can you change userName to firstName, then
+// add an age and lastName to the 'you' Object, making sure to account for it in the Specialised
+// Object for defining its structure.
+
+const you2: {
+  firstName: string;
+  lastName: string;
+  age: number;
+  isReturning: boolean;
+} = {
+  firstName: "Bobby",
+  lastName: "Brown",
+  age: 22,
+  isReturning: true,
+};
+
+// Array Types
+// Can you add a stayedAt property to the you Object, that contains places you
+// have stayed as strings, then add the correct key with assigned type to the
+// existing Object Type?
+const you3: {
+  firstName: string;
+  lastName: string;
+  isReturning: boolean;
+  age: number;
+  stayedAt: (string | number)[];
+} = {
+  firstName: "Bobby",
+  lastName: "Brown",
+  isReturning: true,
+  age: 35,
+  stayedAt: ["florida-home", "oman-flat", "tokyo-bungalow", 22],
+};
