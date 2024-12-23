@@ -69,7 +69,7 @@ const properties: {
     town: "Lagos",
     postcode: 23401,
     country: "Nigeria",
-    contact: [1234567890, "blaisehouse@gmail.com"],
+    contact: [+2341234567890, "blaisehouse@gmail.com"],
     forRent: true,
   },
   {
@@ -81,7 +81,7 @@ const properties: {
     town: "Barbie's Palace",
     postcode: 24700,
     country: "Lala Land",
-    contact: [5678901234, "nokensallowed@gmail.com"],
+    contact: [+2345678901234, "nokensallowed@gmail.com"],
     forRent: false,
   },
   {
@@ -93,7 +93,7 @@ const properties: {
     town: "Nut House",
     postcode: 10654,
     country: "Asylum",
-    contact: [8901234567, "weareallcrazy@gmail.com"],
+    contact: [+2348901234567, "weareallcrazy@gmail.com"],
     forRent: true,
   },
 ];
