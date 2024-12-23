@@ -58,7 +58,7 @@ const properties: {
   town: string;
   postcode: number;
   country: string;
-  contact: string;
+  contact: [number, string];
   forRent: boolean;
 }[] = [
   {
@@ -69,7 +69,7 @@ const properties: {
     town: "Lagos",
     postcode: 23401,
     country: "Nigeria",
-    contact: "blaisehouse@gmail.com",
+    contact: [1234567890, "blaisehouse@gmail.com"],
     forRent: true,
   },
   {
@@ -81,7 +81,7 @@ const properties: {
     town: "Barbie's Palace",
     postcode: 24700,
     country: "Lala Land",
-    contact: "nokensallowed@gmail.com",
+    contact: [5678901234, "nokensallowed@gmail.com"],
     forRent: false,
   },
   {
@@ -93,7 +93,7 @@ const properties: {
     town: "Nut House",
     postcode: 10654,
     country: "Asylum",
-    contact: "weareallcrazy@gmail.com",
+    contact: [8901234567, "weareallcrazy@gmail.com"],
     forRent: true,
   },
 ];
