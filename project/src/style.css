@@ -5,6 +5,7 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial;
   color: darkgrey;
+  overflow: hidden;
   flex-direction: column;
 }
 
@@ -58,4 +59,14 @@ img {
   width: 200px;
   height: 200px;
   object-fit: fill;
+}
+
+.footer {
+  width: 100%;
+  background-color: lightcoral;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 30px;
+  color: white;
 }

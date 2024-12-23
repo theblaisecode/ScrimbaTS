@@ -8,6 +8,7 @@ export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
 
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
+const footer = document.querySelector<HTMLDivElement>(".footer");
 
 let isOpen: boolean;
 
@@ -119,4 +120,9 @@ for (let i = 0; i < properties.length; i++) {
   if (allProperties) {
     allProperties.appendChild(card);
   }
+}
+
+let currentLocation: [string, string, number] = ["Lagos", "09:11", 12];
+if (footer) {
+  footer.innerHTML = `Location: ${currentLocation[0]} - Time: ${currentLocation[1]} - Degrees: ${currentLocation[2]}°`;
 }
