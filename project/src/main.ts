@@ -47,6 +47,19 @@ const you: {
   isReturning: true,
 };
 
+// Properties
+let properties: {
+  image: string;
+  title: string;
+  price: number;
+  address: string;
+  town: string;
+  postcode: number;
+  country: string;
+  contact: number;
+  forRent: boolean;
+}[];
+
 onlyNum(
   reviews.length,
   reviews[reviews.length - 1].name,
