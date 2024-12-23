@@ -47,8 +47,9 @@ const you: {
   isReturning: true,
 };
 
+
 // Properties
-let properties: {
+const properties: {
   image: string;
   title: string;
   price: number;
@@ -56,9 +57,21 @@ let properties: {
   town: string;
   postcode: number;
   country: string;
-  contact: number;
+  contact: string;
   forRent: boolean;
-}[];
+}[] = [
+  {
+    image: "https://avatars.githubusercontent.com/u/89015653?v=4",
+    title: 'Blaise House',
+    price: 3000,
+    address: '123, Blaise Avenu, Lagos, Nigeria',
+    town: 'Lagos',
+    postcode: 23401;
+    country: 'Nigeria',
+    contact: 'blaisehouse@gmail.com',
+    forRent: true
+  },
+];
 
 onlyNum(
   reviews.length,
