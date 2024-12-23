@@ -64,9 +64,9 @@ const properties: {
     image: "https://avatars.githubusercontent.com/u/89015653?v=4",
     title: 'Blaise House',
     price: 3000,
-    address: '123, Blaise Avenu, Lagos, Nigeria',
+    address: '123, Blaise Avenue',
     town: 'Lagos',
-    postcode: 23401;
+    postcode: 23401,
     country: 'Nigeria',
     contact: 'blaisehouse@gmail.com',
     forRent: true
