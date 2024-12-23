@@ -47,7 +47,6 @@ const you: {
   isReturning: true,
 };
 
-
 // Properties
 const properties: {
   image: string;
@@ -62,14 +61,38 @@ const properties: {
 }[] = [
   {
     image: "https://avatars.githubusercontent.com/u/89015653?v=4",
-    title: 'Blaise House',
+    title: "Blaise House",
     price: 3000,
-    address: '123, Blaise Avenue',
-    town: 'Lagos',
+    address: "123, Blaise Avenue",
+    town: "Lagos",
     postcode: 23401,
-    country: 'Nigeria',
-    contact: 'blaisehouse@gmail.com',
-    forRent: true
+    country: "Nigeria",
+    contact: "blaisehouse@gmail.com",
+    forRent: true,
+  },
+  {
+    image:
+      "https://news.airbnb.com/wp-content/uploads/sites/4/2023/06/01-Kens-DreamHouse-Airbnb-Exterior-Credit-Hogwash-Studios-2.jpg?w=2048",
+    title: "Barbie's Dream House",
+    price: 1200,
+    address: "Mansion 47",
+    town: "Barbie's Palace",
+    postcode: 23401,
+    country: "Lala Land",
+    contact: "nokensallowed@gmail.com",
+    forRent: false,
+  },
+  {
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsO1TQ619-vp_ZAKK4L8Mda-FAWf2GOgP7Qw&s",
+    title: "Mad House",
+    price: 100,
+    address: "74 Crazy Lane",
+    town: "Nut House",
+    postcode: 23401,
+    country: "Asylum",
+    contact: "weareallcrazy@gmail.com",
+    forRent: true,
   },
 ];
 
