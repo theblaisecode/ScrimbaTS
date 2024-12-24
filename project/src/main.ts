@@ -12,9 +12,9 @@ const footer = document.querySelector<HTMLDivElement>(".footer");
 
 let isOpen: boolean;
 
-const GOLD_USER = "Gold";
-const SILVER_USER = "Silver";
-const BRONZE_USER = "Bronze";
+const GOLD_USER = "GOLD_USER";
+const SILVER_USER = "SILVER_USER";
+const BRONZE_USER = "BRONZE_USER";
 
 export enum Loyalty {
   GOLD_USER,
