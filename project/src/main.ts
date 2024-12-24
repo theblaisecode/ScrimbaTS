@@ -12,28 +12,38 @@ const footer = document.querySelector<HTMLDivElement>(".footer");
 
 let isOpen: boolean;
 
+const GOLD_USER = "Gold Star";
+const SILVER_USER = "Silver Star";
+const BRONZE_USER = "Bronze Star";
+
+export enum Loyalty {
+  GOLD_USER,
+  SILVER_USER,
+  BRONZE_USER,
+}
+
 const reviews: {
   name: string;
   stars: number;
-  loyaltyUser: boolean;
+  loyaltyUser: Loyalty;
   date: string;
 }[] = [
   {
     name: "Sheia",
     stars: 5,
-    loyaltyUser: true,
+    loyaltyUser: Loyalty.GOLD_USER,
     date: "01-04-2021",
   },
   {
     name: "Andrzej",
     stars: 3,
-    loyaltyUser: false,
+    loyaltyUser: Loyalty.BRONZE_USER,
     date: "28-03-2021",
   },
   {
     name: "Omar",
     stars: 4,
-    loyaltyUser: true,
+    loyaltyUser: Loyalty.SILVER_USER,
     date: "27-03-2021",
   },
 ];
@@ -145,4 +155,9 @@ const you4 = {
   stayedAt: ["Lagos", "osun", "Imo", "Anambra"],
 };
 
-// Enum Challenge
+// Enum Types mini-challenge
+// Replace the value of loyaltyUser to a GOLD_USER, SILVER_USER or BRONZE_USER, making sure to
+// use what we learnt about Enums in the previous lesson. Make Sheia GOLD, Andrzej BRONZE
+// and Omar SILVER.
+// 2. export the enum
+// 3. Fix the function in the utils to show Sheias star as she is a GOLD_USER.
