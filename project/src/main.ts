@@ -50,7 +50,7 @@ const you: {
   isReturning: true,
 };
 
-//
+// Type Alias
 type Price = 20 | 30 | 10;
 
 // Properties
