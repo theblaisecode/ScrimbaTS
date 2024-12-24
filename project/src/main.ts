@@ -126,3 +126,23 @@ let currentLocation: [string, string, number] = ["Lagos", "09:11", 12];
 if (footer) {
   footer.innerHTML = `Location: ${currentLocation[0]} - Time: ${currentLocation[1]} - Degrees: ${currentLocation[2]}°`;
 }
+
+// Enum
+const ADMIN = "admin";
+const READ_ONLY = "read-only";
+
+enum Permissions {
+  ADMIN,
+  READ_ONLYs,
+}
+
+const you4 = {
+  firstName: "Blaise",
+  lastName: "Nwachukwu",
+  permissions: Permissions.ADMIN,
+  isReturning: true,
+  age: 22,
+  stayedAt: ["Lagos", "osun", "Imo", "Anambra"],
+};
+
+// Enum Challenge
