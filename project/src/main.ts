@@ -103,7 +103,7 @@ const properties: {
 onlyNum(
   reviews.length,
   reviews[reviews.length - 1].name,
-  reviews[reviews.length - 1].Loyalty
+  reviews[reviews.length - 1].loyaltyUser
 );
 
 populateUser(you.isReturning, you.firstName);

@@ -10,7 +10,7 @@ export const recentReview =
 export function onlyNum(
   reviewAmount: number,
   recent: string,
-  loyalty: boolean
+  loyalty: Loyalty
 ) {
   if (reviewTotalDisplay) {
     reviewTotalDisplay.innerHTML = `Number of reviews: ${reviewAmount.toString()}`;
@@ -18,7 +18,7 @@ export function onlyNum(
 
   if (recentReview) {
     recentReview.innerHTML = `Most recent review ${recent} | ${
-      loyalty ? "⭐" : "🚫"
+      Loyalty.SILVER_USER ? "⭐" : "🚫"
     }`;
   }
 
