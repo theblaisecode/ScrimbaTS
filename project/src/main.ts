@@ -50,11 +50,14 @@ const you: {
   isReturning: true,
 };
 
+//
+type Price = 20 | 30 | 10;
+
 // Properties
 const properties: {
   image: string;
   title: string;
-  price: number;
+  price: Price;
   address: string;
   town: string;
   postcode: number;
@@ -65,7 +68,7 @@ const properties: {
   {
     image: "https://avatars.githubusercontent.com/u/89015653?v=4",
     title: "Blaise House",
-    price: 3000,
+    price: 30,
     address: "123, Blaise Avenue",
     town: "Lagos",
     postcode: 23401,
@@ -77,7 +80,7 @@ const properties: {
     image:
       "https://news.airbnb.com/wp-content/uploads/sites/4/2023/06/01-Kens-DreamHouse-Airbnb-Exterior-Credit-Hogwash-Studios-2.jpg?w=2048",
     title: "Barbie's Dream House",
-    price: 1200,
+    price: 12,
     address: "Mansion 47",
     town: "Barbie's Palace",
     postcode: 24700,
@@ -89,7 +92,7 @@ const properties: {
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsO1TQ619-vp_ZAKK4L8Mda-FAWf2GOgP7Qw&s",
     title: "Mad House",
-    price: 100,
+    price: 10,
     address: "74 Crazy Lane",
     town: "Nut House",
     postcode: 10654,
