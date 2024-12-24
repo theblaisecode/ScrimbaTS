@@ -13,7 +13,7 @@ export function onlyNum(
   loyalty: Loyalty
 ) {
   if (reviewTotalDisplay) {
-    reviewTotalDisplay.innerHTML = `Number of reviews: ${reviewAmount.toString()}`;
+    reviewTotalDisplay.innerHTML = `${reviewAmount.toString()} Review${makeMultiple(reviewAmount)}`;
   }
 
   if (recentReview) {
@@ -51,8 +51,8 @@ function add(firstValue: number, secondValue: number): number {
   return firstValue + secondValue;
 }
 
-export function makeMultiple(value: number) {
-  if (value > 1) {
+export function makeMultiple(value: number): string {
+  if (value > 1 || value == 0) {
     return "s";
-  }
+  } else return "";
 }
