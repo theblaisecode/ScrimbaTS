@@ -5,6 +5,7 @@ const returningUserDisplay =
 const userNameDisplay = document.querySelector<HTMLSpanElement>("#user");
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
+  import { Loyalty } from "./main";
 
 export function onlyNum(
   reviewAmount: number,
