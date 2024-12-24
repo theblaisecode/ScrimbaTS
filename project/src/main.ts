@@ -1,17 +1,14 @@
 import { onlyNum, populateUser } from "./utils";
 import "./style.css";
-
 export const reviewTotalDisplay =
   document.querySelector<HTMLSpanElement>("#reviews");
-
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
-
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
 const footer = document.querySelector<HTMLDivElement>(".footer");
 import { Loyalty, Permissions } from "./enum";
 
-let isOpen: boolean;
+let isLoggedIn: boolean;
 
 const reviews: {
   name: string;
@@ -109,6 +106,21 @@ onlyNum(
 );
 
 populateUser(you.isReturning, you.firstName);
+
+// Functions
+let authorityStatus: any;
+
+function showDetails(
+  authorityStatus: any,
+  element: HTMLDivElement,
+  price: number
+) {
+  if (authorityStatus) {
+    const priceDisplay = document.createElement("div");
+    priceDisplay.innerHTML = price.toString() + "/night";
+    element.appendChild(priceDisplay);
+  }
+}
 
 //Add the properties
 for (let i = 0; i < properties.length; i++) {
