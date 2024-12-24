@@ -9,18 +9,9 @@ export const recentReview =
 
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
 const footer = document.querySelector<HTMLDivElement>(".footer");
+import { Loyalty, Permissions } from "./enum";
 
 let isOpen: boolean;
-
-const GOLD_USER = "GOLD_USER";
-const SILVER_USER = "SILVER_USER";
-const BRONZE_USER = "BRONZE_USER";
-
-export enum Loyalty {
-  GOLD_USER,
-  SILVER_USER,
-  BRONZE_USER,
-}
 
 const reviews: {
   name: string;
@@ -112,7 +103,7 @@ const properties: {
 onlyNum(
   reviews.length,
   reviews[reviews.length - 1].name,
-  reviews[reviews.length - 1].loyaltyUser
+  reviews[reviews.length - 1].Loyalty
 );
 
 populateUser(you.isReturning, you.firstName);
@@ -138,14 +129,6 @@ if (footer) {
 }
 
 // Enum
-const ADMIN = "admin";
-const READ_ONLY = "read-only";
-
-enum Permissions {
-  ADMIN,
-  READ_ONLYs,
-}
-
 const you4 = {
   firstName: "Blaise",
   lastName: "Nwachukwu",
@@ -154,10 +137,3 @@ const you4 = {
   age: 22,
   stayedAt: ["Lagos", "osun", "Imo", "Anambra"],
 };
-
-// Enum Types mini-challenge
-// Replace the value of loyaltyUser to a GOLD_USER, SILVER_USER or BRONZE_USER, making sure to
-// use what we learnt about Enums in the previous lesson. Make Sheia GOLD, Andrzej BRONZE
-// and Omar SILVER.
-// 2. export the enum
-// 3. Fix the function in the utils to show Sheias star as she is a GOLD_USER.
