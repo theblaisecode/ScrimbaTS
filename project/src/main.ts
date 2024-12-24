@@ -109,7 +109,7 @@ populateUser(you.isReturning, you.firstName);
 
 // Functions
 let authorityStatus: any;
-isLoggedIn = true
+isLoggedIn = true;
 
 function showDetails(
   authorityStatus: boolean | Permissions,
@@ -135,7 +135,7 @@ for (let i = 0; i < properties.length; i++) {
 
   if (allProperties) {
     allProperties.appendChild(card);
-    showDetails(isLoggedIn, card, properties[i].price)
+    showDetails(isLoggedIn, card, properties[i].price);
   }
 }
 
