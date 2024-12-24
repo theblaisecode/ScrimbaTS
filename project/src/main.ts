@@ -7,6 +7,7 @@ export const recentReview =
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
 const footer = document.querySelector<HTMLDivElement>(".footer");
 import { Loyalty, Permissions } from "./enum";
+import { Price, Country } from "./types";
 
 let isLoggedIn: boolean;
 
@@ -50,9 +51,6 @@ const you: {
   isReturning: true,
 };
 
-// Type Alias
-type Price = 20 | 30 | 10;
-
 // Properties
 const properties: {
   image: string;
@@ -61,7 +59,7 @@ const properties: {
   address: string;
   town: string;
   postcode: number;
-  country: string;
+  country: Country;
   contact: [number, string];
   forRent: boolean;
 }[] = [
