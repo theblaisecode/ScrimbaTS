@@ -109,15 +109,16 @@ populateUser(you.isReturning, you.firstName);
 
 // Functions
 let authorityStatus: any;
+isLoggedIn = true
 
 function showDetails(
-  authorityStatus: any,
+  authorityStatus: boolean | Permissions,
   element: HTMLDivElement,
   price: number
 ) {
   if (authorityStatus) {
     const priceDisplay = document.createElement("div");
-    priceDisplay.innerHTML = price.toString() + "/night";
+    priceDisplay.innerHTML = `$${price.toString()} / night`;
     element.appendChild(priceDisplay);
   }
 }
@@ -134,6 +135,7 @@ for (let i = 0; i < properties.length; i++) {
 
   if (allProperties) {
     allProperties.appendChild(card);
+    showDetails(isLoggedIn, card, properties[i].price)
   }
 }
 

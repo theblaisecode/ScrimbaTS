@@ -54,4 +54,4 @@ function add(firstValue: number | string, secondValue: number | string) {
 const combinedReviews = add(5, 1);
 const firstNameLastName = add("Ania", "Kubow");
 
-console.log(combinedReviews, firstNameLastNames)
+console.log(combinedReviews, firstNameLastName)
