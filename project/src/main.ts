@@ -18,6 +18,7 @@ const reviews: {
   stars: number;
   loyaltyUser: Loyalty;
   date: string;
+  description?: string;
 }[] = [
   {
     name: "Sheia",
@@ -36,6 +37,7 @@ const reviews: {
     stars: 4,
     loyaltyUser: Loyalty.SILVER_USER,
     date: "27-03-2021",
+    description: "Awesome host and loction",
   },
 ];
 

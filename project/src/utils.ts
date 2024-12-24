@@ -5,7 +5,7 @@ const returningUserDisplay =
 const userNameDisplay = document.querySelector<HTMLSpanElement>("#user");
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
-  import { Loyalty } from "./enum";
+import { Loyalty } from "./enum";
 
 export function onlyNum(
   reviewAmount: number,
@@ -32,5 +32,21 @@ export function populateUser(returning: boolean, user: string) {
 
   if (userNameDisplay) {
     userNameDisplay.innerHTML = user;
+  }
+}
+
+function add(firstValue, secondValue) {
+  let result;
+  if (typeof firstValue === "number" && typeof secondValue === "number") {
+    result = firstValue + secondValue;
+  }
+  if (typeof firstValue === "string" && typeof secondValue === "string") {
+    result = firstValue + " " + secondValue;
+  }
+  if (typeof firstValue === "number" && typeof secondValue === "string") {
+    console.log("cannot perform this addition");
+  }
+  if (typeof firstValue === "string" && typeof secondValue === "number") {
+    console.log("cannot perform this addition");
   }
 }
