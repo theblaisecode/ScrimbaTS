@@ -115,6 +115,8 @@ populateUser(you.isReturning, you.firstName);
 let authorityStatus: any;
 isLoggedIn = true;
 
+console.log(authorityStatus);
+
 //Add the properties
 for (let i = 0; i < properties.length; i++) {
   const card = document.createElement("div");
@@ -145,6 +147,7 @@ const you4 = {
   age: 22,
   stayedAt: ["Lagos", "osun", "Imo", "Anambra"],
 };
+console.log(you4);
 
 //Broken code
 let count = 0;
