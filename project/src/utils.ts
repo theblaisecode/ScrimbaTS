@@ -59,4 +59,44 @@ export function makeMultiple(value: number): string {
   } else return "";
 }
 
-// Next up
+const reviews: {
+  name: string;
+  stars: number;
+  loyaltyUser: Loyalty;
+  date: string;
+  description?: string;
+}[] = [
+  {
+    name: "Sheia",
+    stars: 5,
+    loyaltyUser: Loyalty.GOLD_USER,
+    date: "01-04-2021",
+  },
+  {
+    name: "Andrzej",
+    stars: 3,
+    loyaltyUser: Loyalty.BRONZE_USER,
+    date: "28-03-2021",
+  },
+  {
+    name: "Omar",
+    stars: 4,
+    loyaltyUser: Loyalty.SILVER_USER,
+    date: "27-03-2021",
+    description: "Awesome host and loction",
+  },
+];
+
+// Broken code
+export function getTopTwoReviews(
+  reviews: {
+    name: string;
+    stars: number;
+    loyaltyUser: Loyalty;
+    date: string;
+  }[]
+):{ name: string; stars: number; loyaltyUser: Loyalty; date: string }[]
+{
+  const sortedReviews = reviews.sort((a, b) => b.stars - a.stars);
+  return sortedReviews.slice(0, 2);
+}

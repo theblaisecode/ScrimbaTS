@@ -1,10 +1,13 @@
-import { onlyNum, populateUser } from "./utils";
+import { onlyNum, populateUser, showDetails, getTopTwoReviews } from "./utils";
 import "./style.css";
 export const reviewTotalDisplay =
   document.querySelector<HTMLSpanElement>("#reviews");
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
+const reviewContainer = document.querySelector<HTMLDivElement>(".reviews");
+const container = document.querySelector<HTMLDivElement>(".container");
+const button = document.querySelector<HTMLButtonElement>("button");
 const footer = document.querySelector<HTMLDivElement>(".footer");
 import { Loyalty, Permissions } from "./enum";
 import { Price, Country } from "./types";
@@ -142,3 +145,38 @@ const you4 = {
   age: 22,
   stayedAt: ["Lagos", "osun", "Imo", "Anambra"],
 };
+
+//Broken code
+let count = 0;
+function addReviews(
+  array: { name: string; star: number; loyaltyUser: Loyalty; date: string }[]
+): void {
+  if (!count) {
+    count++;
+    const topTwo = getTopTwoReviews(array);
+    for (let i = 0; i < topTwo.length; i++) {
+      const card = document.createElement("div");
+      card.classList.add("review-card");
+      card.innerHTML = topTwo[i].stars + " stars from " + topTwo[i].name;
+      if (reviewContainer) {
+        reviewContainer.appendChild(card);
+      }
+    }
+    if (container) {
+      container.removeChild(button);
+    }
+  }
+}
+
+button.addEventListener("click", () => addReviews(reviews));
+
+let currentLocation2: [string, string, number] = ["London", "11.03", 17];
+if (footer) {
+  footer.innerHTML =
+    currentLocation2[0] +
+    " " +
+    currentLocation2[1] +
+    " " +
+    currentLocation2[2] +
+    "°";
+}
