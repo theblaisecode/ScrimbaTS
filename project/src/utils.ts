@@ -6,6 +6,7 @@ const userNameDisplay = document.querySelector<HTMLSpanElement>("#user");
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
 import { Loyalty } from "./enum";
+import { Review } from "./interface";
 
 export function onlyNum(
   reviewAmount: number,
@@ -60,14 +61,7 @@ export function makeMultiple(value: number): string {
 }
 
 // Broken code
-export function getTopTwoReviews(
-  reviews: {
-    name: string;
-    stars: number;
-    loyaltyUser: Loyalty;
-    date: string;
-  }[]
-): { name: string; stars: number; loyaltyUser: Loyalty; date: string }[] {
+export function getTopTwoReviews(reviews: Review[]): Review[] {
   const sortedReviews = reviews.sort((a, b) => b.stars - a.stars);
   return sortedReviews.slice(0, 2);
 }
