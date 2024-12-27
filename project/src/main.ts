@@ -48,18 +48,20 @@ const you: {
   isReturning: true,
 };
 
-// Properties
-const properties: {
+interface Properties {
   image: string;
   title: string;
   price: Price;
   address: string;
   town: string;
-  postcode: number;
+  postcode: number | string;
   country: Country;
   contact: [number, string];
   forRent: boolean;
-}[] = [
+}
+
+// Properties
+const properties: Properties[] = [
   {
     image: "https://avatars.githubusercontent.com/u/89015653?v=4",
     title: "Blaise House",
@@ -175,3 +177,43 @@ if (footer) {
     currentLocation2[2] +
     "°";
 }
+
+// class Car {
+//   make: string;
+//   year: number;
+//   color: string;
+//   constructor(make: string, year: number, color: string) {
+//     this.make = make;
+//     this.year = year;
+//     this.color = color;
+//   }
+// }
+
+class MainProperty {
+  src: string;
+  title: string;
+  reviews: Review[];
+  constructor(src: string, title: string, reviews: Review[]) {
+    this.src = src;
+    this.title = title;
+    this.reviews = reviews;
+  }
+}
+
+let yourMainProperty = new MainProperty(
+  "images/italian.jpg",
+  "Italian  House",
+  [
+    {
+      name: "Blaise",
+      stars: 5,
+      loyaltyUser: Loyalty.GOLD_USER,
+      date: "12-27- 2024",
+    },
+  ]
+);
+
+const mainImageContainer = document.querySelector(".main-image");
+const image = document.createElement("img");
+image.setAttribute("src", yourMainProperty.src);
+mainImageContainer.appendChild(image);
