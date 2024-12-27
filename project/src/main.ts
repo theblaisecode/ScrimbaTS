@@ -159,7 +159,9 @@ console.log(you4);
 
 //Broken code
 let count = 0;
-button.addEventListener("click", () => addReviews(reviews));
+if (button) {
+  button.addEventListener("click", () => addReviews(reviews));
+}
 
 function addReviews(array: Review[]): void {
   if (!count) {
