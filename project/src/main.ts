@@ -87,7 +87,7 @@ const properties: Properties[] = [
   },
   {
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsO1TQ619-vp_ZAKK4L8Mda-FAWf2GOgP7Qw&s",
+      "https://www.world-architects.com/images/Projects/98/85/74/cc35d868d37b48f290dc8d8cbedaa345/cc35d868d37b48f290dc8d8cbedaa345.6e7b65d0.jpg",
     title: "Mad House",
     price: 10,
     address: "74 Crazy Lane",
@@ -95,6 +95,18 @@ const properties: Properties[] = [
     postcode: 10654,
     country: "Asylum",
     contact: [+2348901234567, "weareallcrazy@gmail.com"],
+    forRent: true,
+  },
+  {
+    image:
+      "https://www.telegraph.co.uk/content/dam/Travel/hotels/asia/malaysia/gayana-malaysia-p.jpg",
+    title: "Gayana Eco Resort",
+    price: 30,
+    address: "Room 25",
+    town: "Gayana",
+    postcode: 10654,
+    country: "Malaysia",
+    contact: [+2348901234567, "gaayanaeco@gmail.com"],
     forRent: true,
   },
 ];
