@@ -201,8 +201,8 @@ class MainProperty {
 }
 
 let yourMainProperty = new MainProperty(
-  "images/italian.jpg",
-  "Italian  House",
+  "https://worldwidelawyers.co.uk/wp/wp-content/uploads/2017/11/Tuscan-Villa-buying-property-in-Italy-624x381.jpg",
+  "Italian House",
   [
     {
       name: "Blaise",
@@ -213,7 +213,10 @@ let yourMainProperty = new MainProperty(
   ]
 );
 
-const mainImageContainer = document.querySelector(".main-image");
+const mainImageContainer =
+  document.querySelector<HTMLDivElement>(".main-image");
 const image = document.createElement("img");
 image.setAttribute("src", yourMainProperty.src);
-mainImageContainer.appendChild(image);
+if (mainImageContainer) {
+  mainImageContainer.appendChild(image);
+}

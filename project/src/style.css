@@ -85,3 +85,8 @@ img {
   width: 90%;
   background-color: coral;
 }
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+}
