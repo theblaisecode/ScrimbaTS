@@ -11,23 +11,11 @@ const button = document.querySelector<HTMLButtonElement>("button");
 const footer = document.querySelector<HTMLDivElement>(".footer");
 import { Loyalty, Permissions } from "./enum";
 import { Price, Country } from "./types";
+import { Review } from "./interface";
 
 let isLoggedIn: boolean;
 
-interface Review {
-  name: string;
-  stars: number;
-  loyaltyUser: Loyalty;
-  date: string;
-}
-
-const reviews: {
-  name: string;
-  stars: number;
-  loyaltyUser: Loyalty;
-  date: string;
-  description?: string;
-}[] = [
+const reviews: Review[] = [
   {
     name: "Sheia",
     stars: 5,
@@ -157,9 +145,7 @@ console.log(you4);
 
 //Broken code
 let count = 0;
-function addReviews(
-  array: { name: string; star: number; loyaltyUser: Loyalty; date: string }[]
-): void {
+function addReviews(array: Review[]): void {
   if (!count) {
     count++;
     const topTwo = getTopTwoReviews(array);
