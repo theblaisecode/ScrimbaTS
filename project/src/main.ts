@@ -14,6 +14,13 @@ import { Price, Country } from "./types";
 
 let isLoggedIn: boolean;
 
+interface Review {
+  name: string;
+  stars: number;
+  loyaltyUser: Loyalty;
+  date: string;
+}
+
 const reviews: {
   name: string;
   stars: number;
@@ -38,7 +45,6 @@ const reviews: {
     stars: 4,
     loyaltyUser: Loyalty.SILVER_USER,
     date: "27-03-2021",
-    description: "Awesome host and loction",
   },
 ];
 
