@@ -159,6 +159,8 @@ console.log(you4);
 
 //Broken code
 let count = 0;
+button.addEventListener("click", () => addReviews(reviews));
+
 function addReviews(array: Review[]): void {
   if (!count) {
     count++;
@@ -176,8 +178,6 @@ function addReviews(array: Review[]): void {
     }
   }
 }
-
-button.addEventListener("click", () => addReviews(reviews));
 
 let currentLocation2: [string, string, number] = ["London", "11.03", 17];
 if (footer) {
