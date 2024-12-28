@@ -234,3 +234,5 @@ image.setAttribute("src", yourMainProperty.src);
 if (mainImageContainer) {
   mainImageContainer.appendChild(image);
 }
+
+// Styling
