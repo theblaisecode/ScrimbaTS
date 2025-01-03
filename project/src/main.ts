@@ -5,8 +5,7 @@ export const reviewTotalDisplay =
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
 import { Loyalty, Permissions } from "./enum";
-import { Properties } from "./interface";
-import { Review } from "./interface";
+import { Review, Properties } from "./interface";
 
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
 const reviewContainer = document.querySelector<HTMLDivElement>(".reviews");
