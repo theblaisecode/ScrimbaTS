@@ -6,6 +6,7 @@ export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
 import { Loyalty, Permissions } from "./enum";
 import { Review, Properties } from "./interface";
+import MainProperty from "./classes";
 
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
 const reviewContainer = document.querySelector<HTMLDivElement>(".reviews");
@@ -190,17 +191,6 @@ if (footer) {
 //     this.color = color;
 //   }
 // }
-
-class MainProperty {
-  src: string;
-  title: string;
-  reviews: Review[];
-  constructor(src: string, title: string, reviews: Review[]) {
-    this.src = src;
-    this.title = title;
-    this.reviews = reviews;
-  }
-}
 
 let yourMainProperty = new MainProperty(
   "https://worldwidelawyers.co.uk/wp/wp-content/uploads/2017/11/Tuscan-Villa-buying-property-in-Italy-624x381.jpg",
