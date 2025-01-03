@@ -4,14 +4,15 @@ export const reviewTotalDisplay =
   document.querySelector<HTMLSpanElement>("#reviews");
 export const recentReview =
   document.querySelector<HTMLHeadingElement>("#mostRecent");
+import { Loyalty, Permissions } from "./enum";
+import { Properties } from "./interface";
+import { Review } from "./interface";
+
 const allProperties = document.querySelector<HTMLDivElement>(".properties");
 const reviewContainer = document.querySelector<HTMLDivElement>(".reviews");
 const container = document.querySelector<HTMLDivElement>(".container");
 const button = document.querySelector<HTMLButtonElement>("button");
 const footer = document.querySelector<HTMLDivElement>(".footer");
-import { Loyalty, Permissions } from "./enum";
-import { Price, Country } from "./types";
-import { Review } from "./interface";
 
 let isLoggedIn: boolean;
 
@@ -47,18 +48,6 @@ const you: {
   age: 22,
   isReturning: true,
 };
-
-interface Properties {
-  image: string;
-  title: string;
-  price: Price;
-  address: string;
-  town: string;
-  postcode: number | string;
-  country: Country;
-  contact: [number, string];
-  forRent: boolean;
-}
 
 // Properties
 const properties: Properties[] = [
